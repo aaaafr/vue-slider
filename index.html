@@ -23,8 +23,8 @@
         <div class="next" @click="next" v-on:keyup.13="next">
             <i class="fas fa-chevron-right"></i>
         </div>
-        <div v-for="image in images">
-            <i class=" fas fa-dot-circle"></i>
+        <div>
+            <i class="fas fa-dot-circle" v-for="(image, index) in images" @click="active"></i>
         </div>
     </div>
 
