@@ -13,10 +13,7 @@ const app = new Vue({
             'https://cdn.britannica.com/24/73524-050-3C2F3432/result-seasons-Mars-planet-inclination-plane-cap.jpg',
             'https://cdn.mos.cms.futurecdn.net/iWG5zg5Mpt8AvZqc4vYa4K.jpg'
         ],
-
-        key: ""
-       
-
+        key: "",
     },
     methods:{
         prev(){
@@ -39,29 +36,22 @@ const app = new Vue({
             return this.counter += 1
 
         },
-
-        keyboardEvent (e) {
-            if (e.which === 37) {
-                if(this.counter === 0){   
-                    return this.counter = this.images.length -1;
-                }
-                return this.counter -= 1
-              
-            }
-          }
-
-
-
-
     },
-    // mounted(){
-    //     alert('Hello')
-    // }
-})
-// Inoltre per scorrere le immagini 
-// permettere anche l’uso delle frecce sinistra e destra 
-// della tastiera 
-// (usate un event listener su document e ascoltate per il keyup)
+
+
+mounted() {
+    document.addEventListener("keyup", (e) => {
+        console.log(e.key);
+        if(e.key === "ArrowLeft"){
+            this.prev()
+        }else if(e.key ==="ArrowRight"){
+            this.next()
+        }
+    })
+}
+});
+
+
 
 
 
