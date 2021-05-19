@@ -54,7 +54,7 @@ mounted() {
         }
     });
 
-    setInterval(this.next, 3000);
+    setInterval(this.next, 1000);
         
         
     
