@@ -39,8 +39,8 @@ const app = new Vue({
         goToImg(index){
             return this.counter = index
 
-        }
-
+        },
+    
     },
 
 
@@ -52,7 +52,13 @@ mounted() {
         }else if(e.key ==="ArrowRight"){
             this.next()
         }
-    })
+    });
+
+    setInterval(this.next, 3000);
+        
+        
+    
+
 }
 });
 
