@@ -36,13 +36,11 @@ const app = new Vue({
             return this.counter += 1
 
         },
-
-        active(){
-            for(image = 0; image < this.images.length; image++){
-                 console.log(this.images[image]);
-            }
+        goToImg(index){
+            return this.counter = index
 
         }
+
     },
 
 
